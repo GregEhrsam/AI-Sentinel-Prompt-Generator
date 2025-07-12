@@ -244,7 +244,7 @@
          */
         function buildPrompt(data) {
             return `
-You are an expert Public Safety Technology Strategy Analyst with deep knowledge of the US public safety market (law enforcement, fire/EMS, 911). Your goal is to create a comprehensive "Deal Brief" for a Motorola Solutions Account Executive targeting the agency detailed below. Your analysis must be sharp, insightful, and actionable.
+You are an expert Public Safety Technology Strategy Analyst with deep knowledge of the US public safety market (law enforcement, fire/EMS, 911). Your goal is to create a comprehensive "Deal Brief" for a Motorola Solutions Account Executive targeting the agency detailed below. Your analysis must be sharp, insightful, and actionable. **Crucially, you must include hyperlinks to all of your sources.**
 
 Use the foundational data provided by the Account Executive and augment it with deep research of publicly available information (agency website, public budget documents, local news archives, social media, professional networking sites).
 
@@ -266,7 +266,7 @@ Use the foundational data provided by the Account Executive and augment it with 
 ---
 **2. YOUR RESEARCH & ANALYSIS TASK**
 ---
-Based on the AE's intelligence and your own deep research, generate a formal **Deal Brief** with the following exact sections:
+Based on the AE's intelligence and your own deep research, generate a formal **Deal Brief** with the following exact sections. Embed hyperlinks directly in your analysis where relevant (e.g., citing a news article or budget document).
 
 **I. Agency Profile & Vitals:**
    - Provide a snapshot: Agency Type (Police/Fire/etc.), Jurisdiction (City/County), Population Served, Sworn/Uniformed Personnel count, and number of stations/precincts.
@@ -302,6 +302,9 @@ Based on the AE's intelligence and your own deep research, generate a formal **D
    - **Wedge Opportunity:** Based on all analysis, what is the single best "entry point" solution from the Motorola ecosystem to solve their most urgent pain?
    - **Ecosystem Vision:** Briefly outline how other Motorola solutions (CommandCentral, Vesta 911, Rave, Video, Drones, Cybersecurity) can create a long-term roadmap to address their other challenges.
    - **Next Steps:** Recommend the immediate next actions for the Account Executive.
+
+**VIII. Source Appendix:**
+   - At the end of your response, provide a clearly formatted list of all URLs used for your research. This includes links to budget documents, news articles, the agency's website, and relevant social media or professional profiles. This is critical for verification.
 `;
         }
 
