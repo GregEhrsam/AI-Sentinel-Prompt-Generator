@@ -3,286 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motorola Solutions - Mega Deal Strategy Prompt Generator</title>
+    <title>Motorola Solutions - Strategic Account Intelligence Intake</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
         }
-        .form-section-header {
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
+        .motorola-blue {
+            background-color: #005cb9;
+        }
+        .motorola-blue-text {
+            color: #005cb9;
+        }
+        .motorola-blue-border {
+            border-color: #005cb9;
+        }
+        .form-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        label {
             font-weight: 600;
-            color: #111827;
+            color: #374151;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            border-color: #d1d5db;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+            border-color: #005cb9;
+            box-shadow: 0 0 0 2px rgba(0, 92, 185, 0.2);
+            outline: none;
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-    <div class="container mx-auto max-w-4xl p-4 sm:p-8">
-        <header class="text-center mb-8">
-            <svg class="mx-auto h-12 w-auto text-blue-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.05 15.5l-4.2-4.2 1.41-1.41 2.79 2.79 5.29-5.29L17.64 9 10.95 17.5z"/>
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <svg class="mx-auto h-12 w-auto text-motorola-blue" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
             </svg>
-            <h1 class="text-3xl font-bold text-gray-900 mt-2">Mega Deal Strategy Prompt Generator</h1>
-            <p class="mt-2 text-md text-gray-600">For Motorola Solutions "Solving for Safer" Ecosystem Deals</p>
-        </header>
+            <h1 class="text-3xl font-bold text-gray-900 mt-2">Strategic Account Intelligence Intake</h1>
+            <p class="text-gray-600 mt-1">Fueling AI-Powered Research for Winning Strategies</p>
+        </div>
 
-        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-            <div id="deal-intake-form" class="space-y-8">
-
-                <!-- Section 1: Customer & Deal Identification -->
-                <div>
-                    <h2 class="form-section-header">1. Customer & Deal Identification</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                        <div>
-                            <label for="ae-name" class="block text-sm font-medium text-gray-700">Account Executive Name</label>
-                            <input type="text" id="ae-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Jane Doe">
-                        </div>
-                        <div>
-                            <label for="deal-nickname" class="block text-sm font-medium text-gray-700">Deal Nickname / Project Name</label>
-                            <input type="text" id="deal-nickname" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Project Guardian">
-                        </div>
-                        <div>
-                            <label for="customer-agency" class="block text-sm font-medium text-gray-700">Primary Customer Agency</label>
-                            <input type="text" id="customer-agency" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., City of Apex Police Department">
-                        </div>
-                        <div>
-                            <label for="geo-location" class="block text-sm font-medium text-gray-700">Geographic Location (City, State)</label>
-                            <input type="text" id="geo-location" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Apex, North Carolina">
-                        </div>
-                        <div>
-                            <label for="deal-size" class="block text-sm font-medium text-gray-700">Estimated Deal Size (USD)</label>
-                            <input type="text" id="deal-size" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="$15,000,000">
-                        </div>
+        <form id="intakeForm" class="space-y-8">
+            <!-- Section 1: AE & Deal Information -->
+            <div class="form-section">
+                <h2 class="text-xl font-bold motorola-blue-text border-b motorola-blue-border pb-2 mb-6">1. Executive & Deal Overview</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="aeName" class="block text-sm font-medium text-gray-700">Account Executive Name</label>
+                        <input type="text" id="aeName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" placeholder="Jane Doe">
+                    </div>
+                    <div>
+                        <label for="agencyName" class="block text-sm font-medium text-gray-700">Target Agency Name</label>
+                        <input type="text" id="agencyName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" placeholder="City of Metropolis Police Dept.">
                     </div>
                 </div>
-
-                <!-- Section 2: Customer Pains & Goals -->
-                <div>
-                    <h2 class="form-section-header">2. Customer's Pains & Goals (The "Why")</h2>
-                    <div class="space-y-4 mt-4">
-                        <div>
-                            <label for="pain-points" class="block text-sm font-medium text-gray-700">What are the customer's primary pain points or challenges?</label>
-                            <textarea id="pain-points" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Disparate communication systems, slow data access in the field, rising crime rates in specific districts, public pressure for transparency."></textarea>
-                        </div>
-                        <div>
-                            <label for="desired-outcomes" class="block text-sm font-medium text-gray-700">What are the customer's stated goals or desired outcomes?</label>
-                            <textarea id="desired-outcomes" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Achieve seamless interoperability, reduce incident response times by 15%, improve officer safety, increase case clearance rates."></textarea>
-                        </div>
-                    </div>
+                <div class="mt-6">
+                    <label for="projectDescription" class="block text-sm font-medium text-gray-700">Project Description / Deal Nickname</label>
+                    <input type="text" id="projectDescription" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" placeholder="Project Phoenix - CAD/RMS Refresh">
                 </div>
-
-                <!-- Section 3: Proposed Motorola Solution -->
-                <div>
-                    <h2 class="form-section-header">3. Proposed Motorola Solution (The "What")</h2>
-                    <div class="mt-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Select key components of the "Solving for Safer" ecosystem for this deal:</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="relative flex items-start">
-                                <div class="flex h-5 items-center"><input id="comp-cc" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"></div>
-                                <div class="ml-3 text-sm"><label for="comp-cc" class="font-medium text-gray-700">Command Center Software (CAD, 911 Call Handling, etc.)</label></div>
-                            </div>
-                            <div class="relative flex items-start">
-                                <div class="flex h-5 items-center"><input id="comp-vsac" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"></div>
-                                <div class="ml-3 text-sm"><label for="comp-vsac" class="font-medium text-gray-700">Video Security & Access Control (Avigilon, Pelco)</label></div>
-                            </div>
-                            <div class="relative flex items-start">
-                                <div class="flex h-5 items-center"><input id="comp-mc" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"></div>
-                                <div class="ml-3 text-sm"><label for="comp-mc" class="font-medium text-gray-700">Mission-Critical Communications (P25 Radios, LTE Devices)</label></div>
-                            </div>
-                            <div class="relative flex items-start">
-                                <div class="flex h-5 items-center"><input id="comp-sw" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"></div>
-                                <div class="ml-3 text-sm"><label for="comp-sw" class="font-medium text-gray-700">Public Safety Software (Records, Evidence, Analytics)</label></div>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <label for="solution-summary" class="block text-sm font-medium text-gray-700">High-Level Solution Summary</label>
-                            <textarea id="solution-summary" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="Summarize the vision for the solution. e.g., 'A fully integrated, city-wide command and control platform that unifies voice, video, and data for all first responders.'"></textarea>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Section 4: Funding & Procurement -->
-                <div>
-                    <h2 class="form-section-header">4. Funding & Procurement (The "How")</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                        <div>
-                            <label for="funding-source" class="block text-sm font-medium text-gray-700">Primary Funding Source</label>
-                            <select id="funding-source" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
-                                <option>Please select...</option>
-                                <option>Local Funds (City/County Budget)</option>
-                                <option>Grant Funding (Federal/State)</option>
-                                <option>State/National Pass-through Funds</option>
-                                <option>Mixed / To Be Determined</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="grant-programs" class="block text-sm font-medium text-gray-700">Known Grant Programs (if applicable)</label>
-                            <input type="text" id="grant-programs" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., UASI, JAG, COPS">
-                        </div>
-                        <div>
-                            <label for="procurement-timeline" class="block text-sm font-medium text-gray-700">Expected Procurement Timeline</label>
-                            <input type="text" id="procurement-timeline" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., RFP expected Q4 2025">
-                        </div>
-                        <div>
-                            <label for="known-competitors" class="block text-sm font-medium text-gray-700">Known Competitors</label>
-                            <input type="text" id="known-competitors" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Harris, L3Harris, other local vendors">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Generate Button -->
-                <div class="text-center pt-4">
-                    <button id="generateBtn" type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Generate AI Prompt
-                    </button>
-                </div>
-
-                <!-- Output Section -->
-                <div id="output-section" class="hidden pt-6">
-                    <h2 class="form-section-header">5. Generated AI Prompt</h2>
-                    <p class="text-sm text-gray-600 mb-4">Copy the text below and paste it into Gemini Pro or your preferred Large Language Model.</p>
-                    <div class="relative">
-                        <textarea id="generatedPrompt" readonly rows="15" class="block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm sm:text-sm p-4"></textarea>
-                        <button id="copyBtn" class="absolute top-2 right-2 inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
-                            Copy
-                        </button>
-                    </div>
-                    <p id="copy-success" class="text-green-600 text-sm mt-2 text-center font-medium hidden">Copied to clipboard!</p>
+                <div class="mt-6">
+                    <label for="dealValue" class="block text-sm font-medium text-gray-700">Estimated Total Contract Value (TCV)</label>
+                    <input type="number" id="dealValue" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" placeholder="5000000">
                 </div>
             </div>
-        </main>
+
+            <!-- Section 2: Customer Needs & Outcomes -->
+            <div class="form-section">
+                <h2 class="text-xl font-bold motorola-blue-text border-b motorola-blue-border pb-2 mb-6">2. The "Why Now?" - Customer Needs & Desired Outcomes</h2>
+                <div>
+                    <label for="primaryDriver" class="block text-sm font-medium text-gray-700">What is the single most important outcome the agency hopes to achieve with this investment?</label>
+                    <select id="primaryDriver" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2">
+                        <option>Select a primary outcome...</option>
+                        <option value="Improve officer/staff safety and wellness">Improve officer/staff safety and wellness</option>
+                        <option value="Reduce emergency response times">Reduce emergency response times</option>
+                        <option value="Increase case clearance rates">Increase case clearance rates</option>
+                        <option value="Enhance community trust and transparency">Enhance community trust and transparency</option>
+                        <option value="Mitigate critical cybersecurity risks">Mitigate critical cybersecurity risks</option>
+                        <option value="Modernize obsolete technology nearing end-of-life">Modernize obsolete technology nearing end-of-life</option>
+                        <option value="Address a new legislative mandate or compliance requirement">Address a new legislative mandate or compliance requirement</option>
+                        <option value="Improve inter-agency collaboration and interoperability">Improve inter-agency collaboration and interoperability</option>
+                    </select>
+                </div>
+                <div class="mt-6">
+                    <label for="driverDetails" class="block text-sm font-medium text-gray-700">Describe the context behind this primary outcome. What events, pressures, or goals are creating this urgency?</label>
+                    <textarea id="driverDetails" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" placeholder="e.g., A recent officer safety incident highlighted communication gaps. The Chief has a mandate from the Mayor to improve community relations following media scrutiny. Their current CAD system is no longer supported by the vendor."></textarea>
+                </div>
+            </div>
+
+            <!-- Section 3: Challenges & Pains -->
+            <div class="form-section">
+                <h2 class="text-xl font-bold motorola-blue-text border-b motorola-blue-border pb-2 mb-6">3. The "Why Not Wait?" - Current Challenges & Pains</h2>
+                <div class="space-y-6">
+                    <div>
+                        <label for="painPersonnel" class="block text-sm font-medium text-gray-700">Personnel Challenges</label>
+                        <p class="text-xs text-gray-500 mb-1">Describe known issues with recruitment, retention, burnout, or morale. What's the impact?</p>
+                        <textarea id="painPersonnel" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2" placeholder="e.g., High turnover in the 911 center is leading to mandatory overtime and dispatcher burnout. The police department is struggling to attract new recruits."></textarea>
+                    </div>
+                    <div>
+                        <label for="painOperations" class="block text-sm font-medium text-gray-700">Operational Inefficiencies</label>
+                        <p class="text-xs text-gray-500 mb-1">Describe data silos, workflow bottlenecks, or communication gaps.</p>
+                        <textarea id="painOperations" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2" placeholder="e.g., Officers complain about redundant data entry between their patrol car and the station's RMS. Fire and Police have trouble communicating on major scenes. Evidence processing is slow and manual."></textarea>
+                    </div>
+                    <div>
+                        <label for="painCyber" class="block text-sm font-medium text-gray-700">Cybersecurity & Technology Risks</label>
+                        <p class="text-xs text-gray-500 mb-1">Describe concerns about aging infrastructure or specific cyber threats.</p>
+                        <textarea id="painCyber" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2" placeholder="e.g., They are concerned about ransomware after a neighboring county was hit. Their server infrastructure is over 10 years old and they lack a dedicated cybersecurity team."></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4: Buying Influences -->
+            <div class="form-section">
+                <h2 class="text-xl font-bold motorola-blue-text border-b motorola-blue-border pb-2 mb-6">4. Buying Influences & Procurement</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="champion" class="block text-sm font-medium text-gray-700">Primary Champion / Internal Advocate</label>
+                        <input type="text" id="champion" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2" placeholder="Name, Title">
+                    </div>
+                    <div>
+                        <label for="economicBuyer" class="block text-sm font-medium text-gray-700">Primary Economic Buyer (Controls Budget)</label>
+                        <input type="text" id="economicBuyer" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2" placeholder="Name, Title (e.g., Chief, City Manager)">
+                    </div>
+                </div>
+                 <div class="mt-6">
+                    <label for="procurementProcess" class="block text-sm font-medium text-gray-700">What is the agency's likely procurement pathway?</label>
+                    <select id="procurementProcess" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2">
+                        <option>Select a pathway...</option>
+                        <option value="Formal RFP Process">Formal RFP Process</option>
+                        <option value="State-Level or Cooperative Contract">State-Level or Cooperative Contract (e.g., NASPO)</option>
+                        <option value="GSA Schedule">GSA Schedule</option>
+                        <option value="Grant-Funded Purchase">Grant-Funded Purchase</option>
+                        <option value="Sole-Source Justification">Sole-Source Justification</option>
+                        <option value="Unknown">Unknown / To be determined</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-end">
+                <button type="button" id="generatePromptBtn" class="motorola-blue text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                    Generate AI Research Prompt
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal for Generated Prompt -->
+    <div id="promptModal" class="modal-overlay fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-11/12 md:max-w-3xl shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-2xl leading-6 font-bold text-gray-900">Your AI Research Prompt is Ready</h3>
+                <div class="mt-4 px-7 py-3">
+                    <p class="text-sm text-gray-500 mb-4">Copy the text below and paste it into Gemini for a comprehensive, AI-generated account brief.</p>
+                    <textarea id="generatedPrompt" readonly rows="15" class="w-full bg-gray-100 p-3 rounded-md text-sm text-left border border-gray-300"></textarea>
+                </div>
+                <div class="items-center px-4 py-3 space-x-4">
+                    <button id="copyBtn" class="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        Copy to Clipboard
+                    </button>
+                    <button id="closeModalBtn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Close
+                    </button>
+                </div>
+                 <p id="copy-success" class="text-green-600 font-semibold mt-2 hidden">Copied!</p>
+            </div>
+        </div>
     </div>
 
     <script>
-        // --- Element References ---
-        const generateBtn = document.getElementById('generateBtn');
-        const outputSection = document.getElementById('output-section');
-        const generatedPromptTextarea = document.getElementById('generatedPrompt');
+        // --- DOM Element References ---
+        const generatePromptBtn = document.getElementById('generatePromptBtn');
+        const promptModal = document.getElementById('promptModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
         const copyBtn = document.getElementById('copyBtn');
-        const copySuccessMsg = document.getElementById('copy-success');
+        const generatedPromptTextarea = document.getElementById('generatedPrompt');
+        const copySuccessMessage = document.getElementById('copy-success');
+        
+        // --- Event Listeners ---
+        generatePromptBtn.addEventListener('click', handleGeneratePrompt);
+        closeModalBtn.addEventListener('click', () => promptModal.classList.add('hidden'));
+        copyBtn.addEventListener('click', copyPromptToClipboard);
 
-        // --- Event Listener for Generate Button ---
-        generateBtn.addEventListener('click', () => {
-            // --- Collect values from all form fields ---
-            const aeName = document.getElementById('ae-name').value;
-            const dealNickname = document.getElementById('deal-nickname').value;
-            const customerAgency = document.getElementById('customer-agency').value;
-            const geoLocation = document.getElementById('geo-location').value;
-            const dealSize = document.getElementById('deal-size').value;
-            const painPoints = document.getElementById('pain-points').value;
-            const desiredOutcomes = document.getElementById('desired-outcomes').value;
-            const solutionSummary = document.getElementById('solution-summary').value;
-            const fundingSource = document.getElementById('funding-source').value;
-            const grantPrograms = document.getElementById('grant-programs').value;
-            const procurementTimeline = document.getElementById('procurement-timeline').value;
-            const knownCompetitors = document.getElementById('known-competitors').value;
+        // --- Core Functions ---
+        
+        /**
+         * Gathers data from the form and constructs the AI prompt.
+         */
+        function handleGeneratePrompt() {
+            const formData = {
+                aeName: document.getElementById('aeName').value,
+                agencyName: document.getElementById('agencyName').value,
+                projectDescription: document.getElementById('projectDescription').value,
+                dealValue: document.getElementById('dealValue').value,
+                primaryDriver: document.getElementById('primaryDriver').value,
+                driverDetails: document.getElementById('driverDetails').value,
+                painPersonnel: document.getElementById('painPersonnel').value,
+                painOperations: document.getElementById('painOperations').value,
+                painCyber: document.getElementById('painCyber').value,
+                champion: document.getElementById('champion').value,
+                economicBuyer: document.getElementById('economicBuyer').value,
+                procurementProcess: document.getElementById('procurementProcess').value,
+            };
 
-            // Collect checkbox values
-            const components = [];
-            if (document.getElementById('comp-cc').checked) components.push('Command Center Software (CAD, 911 Call Handling)');
-            if (document.getElementById('comp-vsac').checked) components.push('Video Security & Access Control (Avigilon, Pelco)');
-            if (document.getElementById('comp-mc').checked) components.push('Mission-Critical Communications (P25 Radios, LTE)');
-            if (document.getElementById('comp-sw').checked) components.push('Public Safety Software (Records, Evidence, Analytics)');
+            const prompt = buildPrompt(formData);
+            generatedPromptTextarea.value = prompt;
+            promptModal.classList.remove('hidden');
+        }
 
-            // --- Construct the Prompt ---
-            let prompt = `ROLE & GOAL:
-You are a world-class strategic research analyst specializing in public safety and government technology procurement. Your goal is to provide a comprehensive research summary and strategic analysis for a Motorola Solutions Account Executive to help win a large, complex deal.
-
-DEAL CONTEXT:
-- Account Executive: ${aeName || 'Not specified'}
-- Project Name: ${dealNickname || 'Not specified'}
-- Estimated Deal Size: ${dealSize || 'Not specified'}
-
-CUSTOMER PROFILE:
-- Primary Agency: ${customerAgency || 'Not specified'}
-- Location: ${geoLocation || 'Not specified'}
-- Known Pain Points: ${painPoints || 'Not specified'}
-- Stated Goals/Desired Outcomes: ${desiredOutcomes || 'Not specified'}
-
-PROPOSED MOTOROLA SOLUTION:
-- Vision: This is a "Solving for Safer" ecosystem deal. The high-level vision is: "${solutionSummary || 'A fully integrated public safety platform.'}"
-- Key Components:
-${components.length > 0 ? components.map(c => `  - ${c}`).join('\n') : '  - Full ecosystem components to be determined.'}
-
-PROCUREMENT & FUNDING LANDSCAPE:
-- Expected Timeline: ${procurementTimeline || 'Not specified'}
-- Primary Funding Source: ${fundingSource !== 'Please select...' ? fundingSource : 'Not specified'}
-- Potential Grant Programs: ${grantPrograms || 'Not specified'}
-- Known Competitors: ${knownCompetitors || 'Not specified'}
-
-ACTIONABLE RESEARCH REQUEST:
-Based on all the information above, please provide a detailed strategic briefing document. Structure your response with the following sections:
-
-1.  **Executive Summary:** A brief overview of the opportunity, key challenges, and a winning thesis for Motorola.
-
-2.  **In-Depth Customer Analysis:**
-    * Research the ${customerAgency} and its jurisdiction (${geoLocation}).
-    * Identify key decision-makers and influencers (e.g., Police/Fire Chief, CIO, City Manager, Mayor, key council members). Provide names and roles if possible.
-    * Find recent news, press releases, or public council meetings related to public safety, technology, or budget allocations for this jurisdiction.
-    * Summarize the key political, economic, and social pressures they are facing.
-
-3.  **Pain Point Deep Dive:**
-    * Elaborate on the stated pain points (${painPoints}). What are the likely root causes and operational impacts of these issues for the agency?
-    * Identify potential *unstated* or underlying pain points based on your analysis of similar agencies.
-
-4.  **Strategic Solution Alignment:**
-    * Connect the proposed Motorola ecosystem components directly to the customer's pain points and desired outcomes. For each component, create a clear "Problem -> Solution -> Outcome" statement.
-    * Articulate the unique value proposition of Motorola's integrated ecosystem versus a multi-vendor, non-integrated approach.
-
-5.  **Competitive Intelligence & SWOT Analysis:**
-    * Provide a profile of the known competitors (${knownCompetitors}). What are their likely strengths, weaknesses, and bidding strategies in this context?
-    * Conduct a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for Motorola Solutions for this specific deal.
-
-6.  **Funding & Procurement Strategy:**
-    * If grant-funded, research the specified grant programs (${grantPrograms}). What are their eligibility requirements, deadlines, and key objectives? How can Motorola's solution align with these?
-    * Provide talking points for positioning this as a strategic investment rather than just a cost, tailored to the likely funding source.
-
-7.  **Recommended Next Steps:**
-    * Suggest 3-5 immediate, actionable next steps for the Account Executive to advance the deal.
-`;
-
-            // --- Display the output ---
-            generatedPromptTextarea.value = prompt.trim();
-            outputSection.classList.remove('hidden');
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        });
-
-        // --- Event Listener for Copy Button ---
-        copyBtn.addEventListener('click', () => {
+        /**
+         * Copies the generated prompt to the user's clipboard.
+         */
+        function copyPromptToClipboard() {
             generatedPromptTextarea.select();
-            // For mobile devices
-            generatedPromptTextarea.setSelectionRange(0, 99999); 
+            document.execCommand('copy');
             
-            try {
-                // Use the modern clipboard API if available, with a fallback
-                if (navigator.clipboard) {
-                    navigator.clipboard.writeText(generatedPromptTextarea.value).then(() => {
-                        showCopySuccess();
-                    });
-                } else {
-                    // Fallback for older browsers
-                    document.execCommand('copy');
-                    showCopySuccess();
-                }
-            } catch (err) {
-                console.error('Failed to copy: ', err);
-            }
-        });
-
-        function showCopySuccess() {
-            copySuccessMsg.classList.remove('hidden');
-            copyBtn.textContent = 'Copied!';
+            // Visual feedback
+            copySuccessMessage.classList.remove('hidden');
             setTimeout(() => {
-                copySuccessMsg.classList.add('hidden');
-                copyBtn.textContent = 'Copy';
+                copySuccessMessage.classList.add('hidden');
             }, 2000);
+        }
+
+        /**
+         * Constructs the detailed prompt string using form data.
+         * @param {object} data - The data collected from the form.
+         * @returns {string} The fully constructed prompt for the AI.
+         */
+        function buildPrompt(data) {
+            return `
+You are an expert Public Safety Technology Strategy Analyst with deep knowledge of the US public safety market (law enforcement, fire/EMS, 911). Your goal is to create a comprehensive "Deal Brief" for a Motorola Solutions Account Executive targeting the agency detailed below. Your analysis must be sharp, insightful, and actionable.
+
+Use the foundational data provided by the Account Executive and augment it with deep research of publicly available information (agency website, public budget documents, local news archives, social media, professional networking sites).
+
+---
+**1. FOUNDATIONAL AE INTELLIGENCE**
+---
+- **Target Agency:** ${data.agencyName || 'Not Provided'}
+- **Deal Description:** ${data.projectDescription || 'Not Provided'}
+- **Estimated TCV:** $${data.dealValue || 'Not Provided'}
+- **Primary Strategic Driver (The "Why Now?"):** ${data.primaryDriver || 'Not Provided'}
+- **Context for Urgency:** ${data.driverDetails || 'Not Provided'}
+- **Known Personnel Pains:** ${data.painPersonnel || 'Not Provided'}
+- **Known Operational Pains:** ${data.painOperations || 'Not Provided'}
+- **Known Cyber/Tech Risks:** ${data.painCyber || 'Not Provided'}
+- **Initial Champion:** ${data.champion || 'Not Provided'}
+- **Assumed Economic Buyer:** ${data.economicBuyer || 'Not Provided'}
+- **Likely Procurement Path:** ${data.procurementProcess || 'Not Provided'}
+
+---
+**2. YOUR RESEARCH & ANALYSIS TASK**
+---
+Based on the AE's intelligence and your own deep research, generate a formal **Deal Brief** with the following exact sections:
+
+**I. Agency Profile & Vitals:**
+   - Provide a snapshot: Agency Type (Police/Fire/etc.), Jurisdiction (City/County), Population Served, Sworn/Uniformed Personnel count, and number of stations/precincts.
+   - Find and state the name of the current Chief/Sheriff/Director.
+
+**II. Deep Dive on Strategic Drivers & Challenges:**
+   - Elaborate on the "Primary Strategic Driver" identified by the AE. Find news articles, press releases, or public statements from agency leadership that validate or add color to this driver.
+   - Synthesize the AE's notes on Personnel, Operational, and Cyber pains with your own research to create a detailed analysis of the agency's top 3-5 challenges. Connect these to broader public safety trends.
+
+**III. Cost of Inaction (COI) Analysis:**
+   - Provide a high-level, evidence-based analysis of the financial and operational costs the agency is likely incurring by maintaining its status quo. Frame this around:
+     - **Personnel Costs:** If they have staffing issues, estimate potential turnover costs.
+     - **Operational & Safety Risk:** Discuss potential liability from incidents exacerbated by technology gaps.
+     - **Cybersecurity Risk:** Reference recent ransomware attacks on similar-sized municipalities to illustrate the potential multi-million-dollar recovery costs.
+
+**IV. Competitive Landscape & Current Technology:**
+   - Identify the agency's current primary vendors for:
+     - CAD (Computer-Aided Dispatch)
+     - RMS (Records Management System)
+     - LMR Radio Network (e.g., P25)
+     - Body-Worn & In-Car Video
+   - Note any known contract expiration dates if discoverable.
+
+**V. Buying Influence Map:**
+   - Research the **Champion** and **Economic Buyer** identified by the AE. Provide a brief professional profile (LinkedIn summary, career history, public statements).
+   - Identify other likely key influencers (e.g., IT Director, Patrol Commander, Finance Director) and their probable priorities.
+
+**VI. Procurement & Financial Insights:**
+   - Confirm the agency's primary procurement pathway. Search for past technology RFPs or bids from this agency to understand their typical process and requirements.
+   - Search for the agency's most recent public budget document. Summarize key line items or stated priorities related to public safety technology, communications, or capital improvements.
+
+**VII. Strategic Recommendations & Wedge Strategy:**
+   - **Wedge Opportunity:** Based on all analysis, what is the single best "entry point" solution from the Motorola ecosystem to solve their most urgent pain?
+   - **Ecosystem Vision:** Briefly outline how other Motorola solutions (CommandCentral, Vesta 911, Rave, Video, Drones, Cybersecurity) can create a long-term roadmap to address their other challenges.
+   - **Next Steps:** Recommend the immediate next actions for the Account Executive.
+`;
         }
 
     </script>
